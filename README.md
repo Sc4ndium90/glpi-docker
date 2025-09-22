@@ -23,7 +23,7 @@ services:
     ports:
       - "80:80"
   db:
-    image: mariadb:10.5
+    image: mariadb:lts
     container_name: glpi-db
     restart: always
     environment:

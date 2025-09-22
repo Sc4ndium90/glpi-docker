@@ -1,6 +1,6 @@
 FROM debian
 
-ARG GLPI_VERSION=10.0.18
+ARG GLPI_VERSION=11.0.0-rc5
 
 # Update and upgrade the system, installing necessary packages
 RUN apt update && \
@@ -17,7 +17,7 @@ RUN curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/deb
 RUN apt update && apt upgrade -y && \
 apt install apache2 php8.3 php8.3-xml php8.3-mysql php8.3-ldap php8.3-xmlrpc \
             php8.3-imap php8.3-curl php8.3-gd php8.3-mbstring php8.3-xml php-cas \
-            php8.3-intl php8.3-zip php8.3-bz2 php8.3-redis php8.3-bcmath cron jq libldap-2.5-0 \
+            php8.3-intl php8.3-zip php8.3-bz2 php8.3-redis php8.3-bcmath cron jq \
             libldap-common libsasl2-2 libsasl2-modules libsasl2-modules-db -y
 
 # Download and install GLPI
